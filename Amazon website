@@ -90,7 +90,9 @@
         }
         .product-grid {
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
+            justify-content: space-between;
         }
         .product-item {
             background-color: white;
@@ -98,10 +100,17 @@
             text-align: center;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 20px); /* 3 items per row */
+            box-sizing: border-box;
         }
         .product-item img {
-            max-width: 100%;
+            width: 100%;
+            height: 200px; /* Fixed height for uniform images */
+            object-fit: cover; /* Maintain aspect ratio */
             border-radius: 5px;
+        }
+        .product-item p {
+            margin-top: 10px;
         }
         footer {
             background-color: #131A22;
@@ -156,20 +165,20 @@
             <h3>Revamp your home in style</h3>
             <div class="product-grid">
                 <div class="product-item">
-                    <img src="product1.jpg" alt="Product 1">
+                    <img src="https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/64593fbc92b90a7a177d740d/whatsapp-image-2023-05-08-at-11-58-38-pm.jpeg" alt="Product 1">
                     <p>Cushion covers, bedsheets & more</p>
                 </div>
                 <div class="product-item">
-                    <img src="product2.jpg" alt="Product 2">
+                    <img src="https://12893449.s21i.faiusr.com/2/1/ABUIABACGAAg5vi-_wUoor_f-Qcw9hA4_wo!800x800.jpg" alt="Product 2">
                     <p>Appliances for your home | Up to 55% off</p>
                 </div>
                 <div class="product-item">
-                <img src="product3.jpg" alt="Product 3">
-                <p>Starting ₹199 | Earphones</p>
+                    <img src="https://m.media-amazon.com/images/I/61HoYnZmlrL.AC_UF1000,1000_QL80.jpg" alt="Product 3">
+                    <p>Starting ₹199 | Earphones</p>
                 </div>
                 <div class="product-item">
-                <img src="product4.jpg" alt="Product 4">
-                <p>kitchen appliances starting at 99</p>
+                    <img src="https://megafurniture.sg/cdn/shop/articles/buying-guide-how-to-get-the-best-kitchen-appliances-megafurniture_9e2e88d4-59ff-48e4-882a-b1a71451a221.jpg?v=1721304078" alt="Product 4">
+                    <p>Kitchen appliances starting at ₹99</p>
                 </div>
             </div>
         </div>
@@ -177,56 +186,67 @@
             <h3>Starting ₹199 | Amazon Brands & more</h3>
             <div class="product-grid">
                 <div class="product-item">
-                    <img src="product5.jpg" alt="Product 5">
+                    <img src="https://www.bhg.com/thmb/eILC_XYlM4FBfW7TPLopSFYR0os=/5041x0/filters:no_upscale():strip_icc()/organization-basics-tips-for-every-room-01-hero-7c7e2f7a922c48f59f91177a3daac6a6.jpg" alt="Product 5">
                     <p>Home storage & organization</p>
                 </div>
                 <div class="product-item">
-                    <img src="product6.jpg" alt="Product 6">
+                    <img src="https://i.pinimg.com/736x/e1/85/34/e1853453def975e29ae1e68cccda6bd1.jpg" alt="Product 6">
                     <p>Automotive essentials | Up to 60% off</p>
                 </div>
                 <div class="product-item">
-                    <img src="product7.jpg" alt="Product 7">
+                    <img src="https://cdn0.weddingwire.in/article/2962/3_2/1280/jpg/122692-indian-hairstyles-for-women.jpeg" alt="Product 7">
                     <p>Up to 60% off | Styles for women</p>
                 </div>
-                <div class="product-item">
-                    <img src="product8.jpg" alt="Product 8">
-                    <p>Up to 60% off | Professional tools, testing</p>
-                </div>
-            </div>
         </div>
         <div class="product-category">
             <h3>Best Sellers in Clothing & Accessories</h3>
             <div class="product-grid">
                 <div class="product-item">
-                    <img src="product9.jpg" alt="Product 9">
+                    <img src="https://www.pngplay.com/wp-content/uploads/6/50-Off-Red-Stamp-Transparent-PNG.png" alt="Product 9">
                 </div>
-                </div>
+            </div>
         </div>
         <div class="product-category">
             <h3>Highly Rated</h3>
             <div class="product-grid">
                 <div class="product-item">
-                    <img src="https://m.media-amazon.com/images/I/71nskyx9P2L._AC_UL320_.jpg" alt="Product 10">
-                    <img src="https://m.media-amazon.com/images/I/81fHmh0FPsL._AC_UL320_.jpg" alt="Product 10">
-                    <img src="https://m.media-amazon.com/images/I/51ToT03TOJL._AC_UL320_.jpg" alt="Product 10">
-                    <img src="https://m.media-amazon.com/images/I/81bOdTogCmL._AC_UL320_.jpg" alt="Product 10">
-                    <img src="https://m.media-amazon.com/images/I/61r8rsrqeWL._AC_UL320_.jpg" alt="Product 10">
-                    <img src="https://m.media-amazon.com/images/I/71Mf7Es+qiL._AC_UL320_.jpg" alt="Product 10">
+                    <img src="https://m.media-amazon.com/images/I/71nskyx9P2L.AC_UL320.jpg" alt="Product 10">
                 </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/81fHmh0FPsL.AC_UL320.jpg" alt="Product 10">
                 </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/51ToT03TOJL.AC_UL320.jpg" alt="Product 10">
+                </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/81bOdTogCmL.AC_UL320.jpg" alt="Product 10">
+                </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/61r8rsrqeWL.AC_UL320.jpg" alt="Product 10">
+                </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/71Mf7Es+qiL.AC_UL320.jpg" alt="Product 10">
+                </div>
+            </div>
         </div>
-<div class="product-category">
+        <div class="product-category">
             <h3></h3>
             <div class="product-grid">
                 <div class="product-item">
-                <img src="https://m.media-amazon.com/images/I/81iCPGSMhCL._AC_UL320_.jpg" alt="product 11">
-                <img src="https://m.media-amazon.com/images/I/51KqnmH8o0L._AC_UL320_.jpg" alt="product 11">
-                <img src="https://m.media-amazon.com/images/I/51QVxIe6BlL._AC_UL320_.jpg" alt="product 11">
-                <img src="https://m.media-amazon.com/images/I/91kc51e7D4L._AC_UL320_.jpg" alt="product 11">
+                    <img src="https://m.media-amazon.com/images/I/81iCPGSMhCL.AC_UL320.jpg" alt="Product 11">
                 </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/51KqnmH8o0L.AC_UL320.jpg" alt="Product 12">
                 </div>
+                <div class="product-item">
+                    <img src="https://m.media-amazon.com/images/I/51QVxIe6BlL.AC_UL320.jpg" alt="Product 13">
                 </div>
-</section>
+                <div class="product-item">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>Amazon Clone - All rights reserved</p>
     </footer>
